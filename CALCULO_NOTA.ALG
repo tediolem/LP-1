@@ -2,7 +2,7 @@ algoritmo "Calculo_Nota"
 
 var
    P1, E1, E2, X, SUB, API, EXF: real
-   media, diferenca, resultado: real
+   media: real
 
 inicio
 
@@ -18,7 +18,6 @@ inicio
    escreva("Digite a nota da Atividade extra: ")
    leia(X)
 
-   // Calcula a média principal
    media <- P1 * 0.5 + E1 * 0.2 + E2 * 0.3 + X
 
    se media>5.9 entao
@@ -54,11 +53,11 @@ inicio
    fimse
    escreval("=========================================")
    se media>5.9 entao
-      escreval("Média final: ", media)
-      escreval("Situação: Aprovado")
+      escreval("MÃ©dia final: ", media)
+      escreval("SituaÃ§Ã£o: Aprovado")
    senao
-      escreval("Média final: ", media)
-      escreval("Situação: Reprovado")
+      escreval("MÃ©dia final: ", media)
+      escreval("SituaÃ§Ã£o: Reprovado")
 
    fimse
 fimalgoritmo
