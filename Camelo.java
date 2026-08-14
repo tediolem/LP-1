@@ -17,7 +17,7 @@ public class Camelo {
         segundo=  camelos/3;
         terceiro= camelos/9;
 
-        IO.println("Mais velho recebeu: "+primeiro+" camelos ");
+        IO.println("Mais velho recebeu: "+primeiro+" camelos "); 
         IO.println("Hamed Namir recebeu: "+segundo+" camelos ");
         IO.println("Harin recebeu: "+terceiro+" camelos ");
 
