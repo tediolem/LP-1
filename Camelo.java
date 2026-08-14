@@ -6,16 +6,20 @@ public class Camelo {
         int camelos,x,soma,primeiro,segundo,terceiro;
         Scanner s=new Scanner(System.in);
 
-        camelos= 35+1;
+       IO.println("Quantos camelos se tem :");
+       camelos=s.nextInt();
+
+       if (camelos % 1 ==0){
+           camelos= camelos+1;
+       }
 
         primeiro= camelos/2;
         segundo=  camelos/3;
         terceiro= camelos/9;
 
-        IO.println(primeiro+"    "+segundo+"     "+terceiro);
-
-
-
+        IO.println("Mais velho recebeu: "+primeiro+" camelos ");
+        IO.println("Hamed Namir recebeu: "+segundo+" camelos ");
+        IO.println("Harin recebeu: "+terceiro+" camelos ");
 
     }
 }
