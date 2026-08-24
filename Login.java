@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Loading {
+public class Login {
     void main () {
         int senhaUsuario, senha;
         Scanner s=new Scanner(System.in);
