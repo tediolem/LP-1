@@ -15,8 +15,9 @@ void main() {
         IO.println("3.Temperatura");
         IO.println("4.Calculo_Múltiplo");
         IO.println("5.Compra_Desconto");
-        IO.println("6.");
-        IO.println("7.");
+        IO.println("6.Calculo_Camelos");
+        IO.println("7.Aluguel_Carro");
+        IO.println("0.PARA SAIR");
         IO.println("===================================");
         Opcao=s.nextInt();
 
