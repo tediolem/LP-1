@@ -149,6 +149,53 @@ void main() {
                 IO.println("PRESCIONE ENTER PARA VOLTA AO MENU!");
                 s.nextLine();
                 break;
+                
+            case 6:
+                Camelo__ camelo = new Camelo__();
+                IO.println("Você escolheu Calculo_Camelo:");
+                IO.println("===================================");
+                IO.println("Quantos camelos tem: ");
+                int c =s.nextInt();
+                IO.println("-----------------------------------");
+                camelo.setQuant_Camelos(c);
+                camelo.calculoCamelos();
+                camelo.calculoIrmaos();
+                IO.println("Mais velho recebeu: "+camelo.getPrimeiro()+" camelos ");
+                IO.println("Hamed Namir recebeu: "+camelo.getSegundo()+" camelos ");
+                IO.println("Harin recebeu: "+camelo.getTerceiro()+" camelos ");
+                IO.println("Ainda sobraram "+camelo.getSobra()+" camelos");
+                s.nextLine();
+                IO.println("PRESCIONE ENTER PARA VOLTA AO MENU!");
+                s.nextLine();
+                break;
+
+            case 7:
+                Aluguel__ aluguel = new Aluguel__();
+                IO.println("Você escolheu Calculo_Aluguel:");
+                IO.println("===================================");
+                IO.println("Quantos dias você ficou com o carro: ");
+                int dia=s.nextInt();
+                IO.println("Quantos Km você rodou com o carro: ");
+                double Km =s.nextDouble();
+                aluguel.setKm_rodado(Km);
+                aluguel.setAluguel_Carro();
+                aluguel.setKm_MaxD();
+                aluguel.setPreco_Km();
+                aluguel.setDias(dia);
+                aluguel.calculoKm();
+                aluguel.calculoTotal();
+                IO.println("-----------------------------------");
+                IO.println("------------NOTA FISCAl------------");
+                IO.println("Dias: "+aluguel.getDias()+"                   x R$"+aluguel.getAluguel_Carro());
+                IO.println("Km rodado: "+aluguel.getKm_Rodado()+"     máx dia: "+aluguel.getKm_MaxD());
+                IO.println("Km's ultrapassados: "+aluguel.getKm_Ultrapassado()+"     x R$"+aluguel.getPreco_Km());
+                IO.println("-----------------------------------");
+                IO.println("Total: R$"+aluguel.getTotal());
+
+                s.nextLine();
+                IO.println("PRESCIONE ENTER PARA VOLTA AO MENU!");
+                s.nextLine();
+                break;
         }
 
     }
