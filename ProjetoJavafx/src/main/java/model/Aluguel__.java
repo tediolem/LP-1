@@ -1,3 +1,5 @@
+package model;
+
 public class Aluguel__{
     private double Aluguel_Carro,Km_MaxD,Km_rodado,Km_Ultrapassado,Total,Preco_Km,Adicional;
     private int Dias;
@@ -16,7 +18,7 @@ public class Aluguel__{
         Km_MaxD = 1000; //dia
     }
     public void setPreco_Km(){
-        Preco_Km = 5.50;//Km a mais
+        Preco_Km = 1.50;//Km a mais
     }
 
     public int getDias(){

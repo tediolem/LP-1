@@ -20,7 +20,7 @@
             <Button id="btnMultiplo" fx:id="btnMultiplo" layoutX="265.0" layoutY="87.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Múltiplo" />
             <Button id="btDesc" fx:id="btnDesconto" layoutX="362.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Desconto" />
             <Button id="btnCamelo" fx:id="btnCamelo" layoutX="265.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Camelo" />
-            <Button id="btnAluguel" fx:id="btnAluguel" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Aluguel Carro" />
+            <Button id="btnAluguel" fx:id="btnAluguel" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#aluguel" prefHeight="26.0" prefWidth="102.0" text="Aluguel Carro" />
             <Button id="btnViagem" fx:id="btnViagem" layoutX="265.0" layoutY="14.0" mnemonicParsing="false" onAction="#viagem" prefHeight="26.0" prefWidth="70.0" text="Viagem" textAlignment="CENTER" />
             <Button id="btnSair" fx:id="btnSair" layoutX="265.0" layoutY="175.0" mnemonicParsing="false" onAction="#sair" prefHeight="26.0" prefWidth="70.0" text="Sair" />
          </children>

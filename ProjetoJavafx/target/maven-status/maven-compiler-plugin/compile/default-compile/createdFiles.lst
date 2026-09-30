@@ -1,10 +1,11 @@
-Main.class
+view/Aluguel__Controller.class
 view/MenuController.class
 Login__.class
-Camelo__.class
 Multiplo__.class
 Temperatuta__.class
-Aluguel__.class
 view/Viagen__Controller.class
+Main.class
+Camelo__.class
+model/Aluguel__.class
 model/Viagem__.class
 Mercado__.class

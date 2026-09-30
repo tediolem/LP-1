@@ -22,6 +22,26 @@ public class MenuController {
     private Button btnViagem;
 
     @FXML
+    private Button btnAluguel;
+
+    @FXML
+    public void aluguel() {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("Aluguel__.fxml")
+            );
+            Parent root = loader.load();
+            Stage stage = (Stage) btnAluguel.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
     public void viagem() {
         try {
 
