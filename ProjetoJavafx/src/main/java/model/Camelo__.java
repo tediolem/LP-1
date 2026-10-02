@@ -1,3 +1,4 @@
+package model;
 //class
 public class Camelo__ {
     //atributos
@@ -34,7 +35,4 @@ public class Camelo__ {
         Terceiro = Quant_Camelos/9;
         Sobra = Quant_Camelos - (Primeiro + Segundo + Terceiro);
     }
-
-
-
 }

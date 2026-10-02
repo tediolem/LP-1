@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuController">
    <children>
       <Label prefHeight="79.0" prefWidth="320.0" text="MENU DE ESCOLHAS">
          <font>
@@ -15,14 +15,14 @@
       </Label>
       <AnchorPane cacheShape="false" centerShape="false" focusTraversable="true" prefHeight="200.0" prefWidth="200.0" scaleShape="false">
          <children>
-            <Button id="btnLogin" fx:id="btnLogin" layoutX="144.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Login" />
+            <Button id="btnLogin" fx:id="btnLogin" layoutX="160.0" layoutY="174.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="70.0" text="Conta" />
             <Button id="btnTemp" fx:id="btnTemperatura" layoutX="144.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Temperatura" />
-            <Button id="btnMultiplo" fx:id="btnMultiplo" layoutX="265.0" layoutY="87.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Múltiplo" />
+            <Button id="btnMultiplo" fx:id="btnMultiplo" layoutX="144.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Múltiplo" />
             <Button id="btDesc" fx:id="btnDesconto" layoutX="362.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Desconto" />
-            <Button id="btnCamelo" fx:id="btnCamelo" layoutX="265.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Camelo" />
+            <Button id="btnCamelo" fx:id="btnCamelo" layoutX="265.0" layoutY="48.0" mnemonicParsing="false" onAction="#camelo" prefHeight="26.0" prefWidth="70.0" text="Camelo" />
             <Button id="btnAluguel" fx:id="btnAluguel" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#aluguel" prefHeight="26.0" prefWidth="102.0" text="Aluguel Carro" />
             <Button id="btnViagem" fx:id="btnViagem" layoutX="265.0" layoutY="14.0" mnemonicParsing="false" onAction="#viagem" prefHeight="26.0" prefWidth="70.0" text="Viagem" textAlignment="CENTER" />
-            <Button id="btnSair" fx:id="btnSair" layoutX="265.0" layoutY="175.0" mnemonicParsing="false" onAction="#sair" prefHeight="26.0" prefWidth="70.0" text="Sair" />
+            <Button id="btnSair" fx:id="btnSair" layoutX="378.0" layoutY="174.0" mnemonicParsing="false" onAction="#sair" prefHeight="26.0" prefWidth="70.0" text="Sair" />
          </children>
       </AnchorPane>
    </children>

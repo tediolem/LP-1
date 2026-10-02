@@ -1,3 +1,4 @@
+package model;
 //class
 public class Login__ {
 
@@ -15,6 +16,7 @@ public class Login__ {
     public int getVerificador(){
         return Verificador;
     }
+    public String getSenha(){return Senha;}
 
     //metodos
     public void verificacaoSenha(){
