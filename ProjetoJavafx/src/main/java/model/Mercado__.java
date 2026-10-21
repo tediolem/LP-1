@@ -1,3 +1,5 @@
+package model;
+
 //classe
 public class Mercado__ {
     //atributos
@@ -38,12 +40,14 @@ public class Mercado__ {
     //metodo
 
     public void calculoTotal(){
+        Total = 0;
         for (int i=0; i<10; i++){
             Total = (Valor_Prod[i] * Quant_Prod[i])+Total;
         }
     }
 
     public void calculoDesc(){
+        Desc = 0;
         if (Total>100){
             Desc = Total * 0.10;
         }

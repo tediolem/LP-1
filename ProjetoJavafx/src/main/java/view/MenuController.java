@@ -30,6 +30,10 @@ public class MenuController {
     @FXML
     private Button btnLogin;
 
+    @FXML private Button btnTemperatura;
+    @FXML private Button btnMultiplo;
+    @FXML private Button btnDesconto;
+
     @FXML
     public void login(){
         try {
@@ -79,6 +83,19 @@ public class MenuController {
             e.printStackTrace();
         }
 
+    }
+
+    @FXML public void temperatura() { abrirTela("Temperatuta__.fxml", btnTemperatura); }
+    @FXML public void multiplo() { abrirTela("Multiplo__.fxml", btnMultiplo); }
+    @FXML public void desconto() { abrirTela("Mercado__.fxml", btnDesconto); }
+
+    private void abrirTela(String arquivo, Button botao) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(arquivo));
+            Parent root = loader.load();
+            Stage stage = (Stage) botao.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception e) { e.printStackTrace(); }
     }
 
     @FXML

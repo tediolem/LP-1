@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="12.0" prefWidth="760.0" prefHeight="650.0"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.Temperatuta__Controller">
+    <padding>
+        <Insets top="18.0" right="24.0" bottom="18.0" left="24.0"/>
+    </padding>
+
+    <Label text="Estação Meteorológica" style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+    <Label text="São José dos Campos — informe a temperatura média de cada mês (°C)." wrapText="true"/>
+
+    <GridPane hgap="18.0" vgap="8.0" alignment="CENTER">
+        <padding><Insets top="8.0" right="8.0" bottom="8.0" left="8.0"/></padding>
+        <Label text="Mês" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label text="Temperatura (°C)" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Resultado" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+        <Label text="Janeiro" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtJaneiro" promptText="Ex.: 22" prefWidth="145" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label fx:id="lblJaneiro" text="—" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+        <Label text="Fevereiro" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtFevereiro" promptText="Ex.: 23" prefWidth="145" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label fx:id="lblFevereiro" text="—" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+
+        <Label text="Março" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtMarco" promptText="Ex.: 21" prefWidth="145" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label fx:id="lblMarco" text="—" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+
+        <Label text="Abril" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtAbril" promptText="Ex.: 19" prefWidth="145" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label fx:id="lblAbril" text="—" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+
+        <Label text="Maio" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtMaio" promptText="Ex.: 17" prefWidth="145" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        <Label fx:id="lblMaio" text="—" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+
+        <Label text="Junho" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtJunho" promptText="Ex.: 16" prefWidth="145" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+        <Label fx:id="lblJunho" text="—" GridPane.rowIndex="6" GridPane.columnIndex="2"/>
+
+        <Label text="Julho" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtJulho" promptText="Ex.: 16" prefWidth="145" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        <Label fx:id="lblJulho" text="—" GridPane.rowIndex="7" GridPane.columnIndex="2"/>
+
+        <Label text="Agosto" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtAgosto" promptText="Ex.: 18" prefWidth="145" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+        <Label fx:id="lblAgosto" text="—" GridPane.rowIndex="8" GridPane.columnIndex="2"/>
+
+        <Label text="Setembro" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtSetembro" promptText="Ex.: 20" prefWidth="145" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+        <Label fx:id="lblSetembro" text="—" GridPane.rowIndex="9" GridPane.columnIndex="2"/>
+
+        <Label text="Outubro" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtOutubro" promptText="Ex.: 22" prefWidth="145" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+        <Label fx:id="lblOutubro" text="—" GridPane.rowIndex="10" GridPane.columnIndex="2"/>
+
+        <Label text="Novembro" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNovembro" promptText="Ex.: 23" prefWidth="145" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+        <Label fx:id="lblNovembro" text="—" GridPane.rowIndex="11" GridPane.columnIndex="2"/>
+
+        <Label text="Dezembro" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDezembro" promptText="Ex.: 22" prefWidth="145" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+        <Label fx:id="lblDezembro" text="—" GridPane.rowIndex="12" GridPane.columnIndex="2"/>
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="12.0">
+        <Button text="Calcular temperaturas" onAction="#calcularTemperatura" defaultButton="true"/>
+        <Button fx:id="btnVoltar" text="Voltar ao menu" onAction="#voltarMenu"/>
+    </HBox>
+
+    <Label text="Classificação geral do ano" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Label fx:id="lblResultadoAno" text="Preencha as 12 temperaturas e clique em Calcular temperaturas." wrapText="true"/>
+</VBox>

@@ -1,3 +1,5 @@
+package model;
+
 //class
 public class Multiplo__ {
     //atributos
