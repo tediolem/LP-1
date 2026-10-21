@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="TOP_CENTER" spacing="12" prefWidth="920" prefHeight="720" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Cabelo__Controller">
+ <padding><Insets top="18" right="24" bottom="18" left="24"/></padding>
+ <Label text="Salão de Beleza" style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+ <HBox spacing="28" alignment="TOP_CENTER">
+  <VBox spacing="8">
+   <Label text="Pessoa" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtNomePessoa" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Idade:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtIdade" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Estilo:" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtEstilo" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+  <VBox spacing="8">
+   <Label text="Cabelo" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Tipo:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtTipo" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Cor:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtCorCabelo" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Comprimento (cm):" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtComprimento" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+  <VBox spacing="8">
+   <Label text="Cabeleireiro" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtNomeCabeleireiro" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Experiência (anos):" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtExperiencia" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Especialidade:" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtEspecialidade" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+ </HBox>
+
+ <Button text="Cadastrar" onAction="#cadastrar"/>
+
+ <VBox fx:id="boxAcoes" spacing="10" alignment="CENTER" disable="true">
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Pessoa:" prefWidth="100" style="-fx-font-weight: bold;"/>
+   <Button text="Ver dados" onAction="#exibirPessoa"/>
+   <Button text="Escolher estilo" onAction="#escolherEstilo"/>
+   <Button text="Mudar estilo" onAction="#mudarEstilo"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Cabelo:" prefWidth="100" style="-fx-font-weight: bold;"/>
+   <Button text="Ver cabelo" onAction="#exibirCabelo"/>
+   <Button text="Cortar" onAction="#cortar"/>
+   <Button text="Pintar" onAction="#pintar"/>
+   <Button text="Pentear" onAction="#pentear"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Cabeleireiro:" prefWidth="100" style="-fx-font-weight: bold;"/>
+   <Button text="Ver dados" onAction="#exibirCabeleireiro"/>
+   <Button text="Cortar cabelo" onAction="#cortarCabelo"/>
+   <Button text="Pintar cabelo" onAction="#pintarCabelo"/>
+   <Button text="Fazer penteado" onAction="#fazerPenteado"/>
+  </HBox>
+ </VBox>
+
+ <TextArea fx:id="txtLog" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+ <Button fx:id="btnVoltar" text="Voltar ao menu" onAction="#voltarMenu"/>
+</VBox>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="TOP_CENTER" spacing="12" prefWidth="920" prefHeight="700" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Mascara__Controller">
+ <padding><Insets top="18" right="24" bottom="18" left="24"/></padding>
+ <Label text="Máscaras Artesanais" style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+ <HBox spacing="28" alignment="TOP_CENTER">
+  <VBox spacing="8">
+   <Label text="Máscara" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Material:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtMaterial" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Cor:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtCor" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Tamanho:" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtTamanho" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+  <VBox spacing="8">
+   <Label text="Artesão" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtNomeArtesao" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Especialidade:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtEspecialidade" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Experiência (anos):" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtExperiencia" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+  <VBox spacing="8">
+   <Label text="Coleção" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtNomeColecao" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Quantidade:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtQuantidade" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Origem:" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtOrigem" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+ </HBox>
+
+ <Button text="Cadastrar" onAction="#cadastrar"/>
+
+ <VBox fx:id="boxAcoes" spacing="10" alignment="CENTER" disable="true">
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Artesão:" prefWidth="80" style="-fx-font-weight: bold;"/>
+   <Button text="Ver dados" onAction="#exibirArtesao"/>
+   <Button text="Fabricar máscara" onAction="#fabricarMascara"/>
+   <Button text="Pintar máscara" onAction="#pintarMascara"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Máscara:" prefWidth="80" style="-fx-font-weight: bold;"/>
+   <Button text="Ver máscara" onAction="#exibirMascara"/>
+   <Button text="Pintar" onAction="#pintar"/>
+   <Button text="Restaurar" onAction="#restaurar"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Coleção:" prefWidth="80" style="-fx-font-weight: bold;"/>
+   <Button text="Ver coleção" onAction="#exibirColecao"/>
+   <Button text="Adicionar máscara" onAction="#adicionarMascara"/>
+   <Button text="Remover máscara" onAction="#removerMascara"/>
+  </HBox>
+ </VBox>
+
+ <TextArea fx:id="txtLog" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+ <Button fx:id="btnVoltar" text="Voltar ao menu" onAction="#voltarMenu"/>
+</VBox>

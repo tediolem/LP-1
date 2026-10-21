@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="14" prefWidth="600" prefHeight="440" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Loja__Controller">
+ <padding><Insets top="24" right="32" bottom="24" left="32"/></padding>
+ <Label text="DORINHO'S" style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+ <GridPane hgap="12" vgap="12" alignment="CENTER">
+  <Label text="Produto:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><ComboBox fx:id="cmbProduto" prefWidth="200" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+  <Label text="Cor:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtCor" promptText="Ex.: Rosa" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+  <Label text="Tamanho:" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtTamanho" promptText="Ex.: M (calça: 42)" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+  <Label text="Preço (R$):" GridPane.rowIndex="3" GridPane.columnIndex="0"/><TextField fx:id="txtPreco" promptText="Ex.: 89,90" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+ </GridPane>
+ <HBox alignment="CENTER" spacing="12">
+  <Button text="Aplicar desconto" onAction="#aplicarDesconto"/>
+  <Button text="Aumentar preço" onAction="#aumentarPreco"/>
+ </HBox>
+ <Label fx:id="lblProduto" wrapText="true" style="-fx-font-size: 16px;"/>
+ <Label fx:id="lblPrecoOriginal" style="-fx-font-size: 16px;"/>
+ <Label fx:id="lblPrecoFinal" style="-fx-font-size: 16px;"/>
+ <Button fx:id="btnVoltar" text="Voltar ao menu" onAction="#voltarMenu"/>
+</VBox>

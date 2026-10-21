@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="TOP_CENTER" spacing="12" prefWidth="920" prefHeight="700" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Trilha__Controller">
+ <padding><Insets top="18" right="24" bottom="18" left="24"/></padding>
+ <Label text="Trilha de Bicicleta" style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+ <HBox spacing="28" alignment="TOP_CENTER">
+  <VBox spacing="8">
+   <Label text="Ciclista" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtNomeCiclista" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Idade:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtIdade" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Velocidade (km/h):" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtVelocidade" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+  <VBox spacing="8">
+   <Label text="Bicicleta" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Marca:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtMarca" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Aro:" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtAro" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+  <VBox spacing="8">
+   <Label text="Trilha" style="-fx-font-weight: bold;"/>
+   <GridPane hgap="8" vgap="8">
+    <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/><TextField fx:id="txtNomeTrilha" prefWidth="140" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Distância (km):" GridPane.rowIndex="1" GridPane.columnIndex="0"/><TextField fx:id="txtDistancia" prefWidth="140" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Dificuldade:" GridPane.rowIndex="2" GridPane.columnIndex="0"/><TextField fx:id="txtDificuldade" prefWidth="140" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+   </GridPane>
+  </VBox>
+ </HBox>
+
+ <Button text="Cadastrar" onAction="#cadastrar"/>
+
+ <VBox fx:id="boxAcoes" spacing="10" alignment="CENTER" disable="true">
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Ciclista:" prefWidth="80" style="-fx-font-weight: bold;"/>
+   <Button text="Pedalar" onAction="#pedalar"/>
+   <Button text="Aumentar velocidade" onAction="#aumentarVelocidade"/>
+   <Button text="Frear" onAction="#frearCiclista"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Bicicleta:" prefWidth="80" style="-fx-font-weight: bold;"/>
+   <Button text="Acelerar" onAction="#acelerar"/>
+   <Button text="Frear" onAction="#frearBicicleta"/>
+   <TextField fx:id="txtMarcha" promptText="Marcha" prefWidth="80"/>
+   <Button text="Trocar marcha" onAction="#trocarMarcha"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+   <Label text="Trilha:" prefWidth="80" style="-fx-font-weight: bold;"/>
+   <Button text="Iniciar percurso" onAction="#iniciarPercurso"/>
+   <Button text="Finalizar percurso" onAction="#finalizarPercurso"/>
+   <Button text="Ver informações" onAction="#exibirInformacoes"/>
+  </HBox>
+ </VBox>
+
+ <TextArea fx:id="txtLog" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+ <Button fx:id="btnVoltar" text="Voltar ao menu" onAction="#voltarMenu"/>
+</VBox>
